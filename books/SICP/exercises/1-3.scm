@@ -1,30 +1,3 @@
-### Exercise 1.1
-
-```rust
-10
-12
-8
-3
-6
-a = 3
-b = a + 1
-19
-#f
-4
-16
-6
-16
-```
-
-### Exercise 1.2
-
-```rust
-/ (* 5 (+ 2 (- 3 (+ 6 (/ 1 3)))) (* 3 (- 2 6) (- 7 2)))
-```
-
-### Exercise 1.3
-
-```rust
 (define (sum-of-squares-two-largest x y z)
   (let* ((largest (max x y z))
          (second-largest (cond ((and (= x largest) (>= y z)) y)
@@ -36,6 +9,3 @@ b = a + 1
     (+ (square largest) (square second-largest))))
 
 (define (square n) (* n n))
-
-```
-
