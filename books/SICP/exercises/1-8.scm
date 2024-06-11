@@ -10,6 +10,8 @@
 (define (average x y)
   (/ (+ x y) 2))
 
+; we could also replace this one with the improved
+; good-enough? procedure from the last exercise
 (define (good-enough? guess x)
   (< (abs (- (square guess) x)) 0.001))
 
