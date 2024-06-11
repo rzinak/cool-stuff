@@ -32,4 +32,4 @@ so (+ 4 5) => 9
 now this one is simpler, it basically subtracts 1 from a
 and adds 1 to b, until a = 0
 
-so in the ends both are recursive aaanad not iterative functions.
+so in the end both are recursive and not iterative procedures.
