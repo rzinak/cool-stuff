@@ -100,6 +100,67 @@ g(n)
 ; m is 1, recursive call
 g(n) = 2^n
 
+(ack 1 0) => 0
+(ack 1 1) => 2
+
+; for n > 1
+(ack 1 n) => (ack 0 (ack 1 (- n 1)))
+
+; if n = 2
+(ack 1, 2)
+(ack 0 (ack 1 1))
+(ack 0 2)
+4 == 2^2
+
+; if n = 3
+(ack 1, 3)
+(ack 0 (ack 1 2))
+(ack 0 (ack 0 (ack 1 1)))
+(ack 0 (ack 0 2))
+(ack 0 4)
+8 == 2^3
+
+; if n = 4
+(ack 1 4)
+(ack 0 (ack 1 3))
+(ack 0 (ack 0 (ack 1 2)))
+(ack 0 (ack 0 (ack 0 (ack 1 1))))
+(ack 0 (ack 0 (ack 0 2)))
+(ack 0 (ack 0 4))
+(ack 0 8)
+16 == 2^4
+
+; thats why (g n) here is 2^n :p
+
 h(n)
 ; m in 2, recursive call
 h(n) = 2^(2^n)
+
+(ack 2 0) => 0
+(ack 2 1) => 2
+
+; for n = 2
+(ack 2 2)
+(ack 1 (ack 2 1))
+(ack 1 2)
+(ack 0 (ack 1 1))
+(ack 0 2)
+4
+
+; for n = 3
+(ack 2 3)
+(ack 1 (ack 2 2))
+(ack 1 (ack 1 (ack 2 1)))
+(ack 1 (ack 1 2))
+(ack 1 (ack 0 (ack 1 1)))
+(ack 1 (ack 0 2))
+(ack 1 4)
+(ack 0 (ack 1 3))
+(ack 0 (ack 0 (ack 1 2)))
+(ack 0 (ack 0 (ack 0 (ack 1 1))))
+(ack 0 (ack 0 (ack 0 2)))
+(ack 0 (ack 0 4))
+(ack 0 8)
+16
+
+; thats why its 2^2^n
