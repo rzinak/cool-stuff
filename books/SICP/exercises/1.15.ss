@@ -29,7 +29,7 @@
 (p (p (p (p (sine (/ 0.449 3.0))))))
 (p (p (p (p (p (sine (/ 0.149 3.0)))))))
 (p (p (p (p (p 0.049))))) -> now this shit is small enough for the base case, then calls p
-(p (p (p (p 0.142)))) ; (im making the evalutions on p below)
+(p (p (p (p 0.142)))) ; (im making the evalutions of p below)
 (p (p (p 0.418)))
 (p (p 0.974))
 (p -0.758) => -0.48
@@ -37,7 +37,7 @@
 ; p for reference
 ; (define (p x) (- (* 3 x) (* 4 (cube x))))
 
-; p evaluations (gonna put it below here to no make since big af)
+; p evaluations (gonna put it below here to not make sine big af)
 
 p => (p 0.049) (- (* 3 0.049) (* 4 (cube 0.049))))
 p => (p 0.049) (- (* 3 0.049) (* 4 0.000125)))
